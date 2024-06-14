@@ -18,7 +18,7 @@ public class BunTest {
     }
 
     @Parameterized.Parameters
-    public static Object[][] getFelineData() {
+    public static Object[][] getBunData() {
         return new Object[][] {
                 { "Пшеничная", 10.0f },
                 { "Ржаная", 8.0f }

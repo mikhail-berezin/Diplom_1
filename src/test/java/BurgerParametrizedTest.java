@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 import static praktikum.IngredientType.SAUCE;
 
 public class BurgerParametrizedTest {
+
     Burger burger;
 
     @Before
@@ -17,21 +18,21 @@ public class BurgerParametrizedTest {
 
     @Test
     public void setBunsTest() {
-        Bun bun = new Bun("foo", 1.0f);
+        Bun bun = new Bun("Ржаная булочка", 8.0f);
         burger.setBuns(bun);
         assertEquals(burger.bun, bun);
     }
 
     @Test
     public void addIngredientTest() {
-        Ingredient ingredient = new Ingredient(SAUCE,"bar", 1.0f);
+        Ingredient ingredient = new Ingredient(SAUCE,"Соус сладкий чили", 14.0f);
         burger.addIngredient(ingredient);
         assertEquals(getLastAddedIngredient(burger), ingredient);
     }
 
     @Test
     public void removeIngredientTest() {
-        Ingredient ingredient = new Ingredient(SAUCE,"bar", 1.0f);
+        Ingredient ingredient = new Ingredient(SAUCE,"Соус барбекю", 16.0f);
         burger.addIngredient(ingredient);
         int ingredientsSize = burger.ingredients.size();
         burger.removeIngredient(ingredientsSize - 1);
@@ -40,9 +41,9 @@ public class BurgerParametrizedTest {
 
     @Test
     public void moveIngredientTest() {
-        Ingredient firstIngredient = new Ingredient(SAUCE,"bar", 1.0f);
-        Ingredient secondIngredient = new Ingredient(SAUCE,"bar", 1.0f);
-        Ingredient thirdIngredient = new Ingredient(SAUCE,"bar", 1.0f);
+        Ingredient firstIngredient = new Ingredient(SAUCE,"Майочуп", 14.5f);
+        Ingredient secondIngredient = new Ingredient(SAUCE,"Кетчица", 15.6f);
+        Ingredient thirdIngredient = new Ingredient(SAUCE,"Горонез", 15.4f);
 
         burger.addIngredient(firstIngredient);
         burger.addIngredient(secondIngredient);

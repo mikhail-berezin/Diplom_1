@@ -23,10 +23,10 @@ public class IngredientTest {
     }
 
     @Parameterized.Parameters
-    public static Object[][] getFelineData() {
+    public static Object[][] getIngredientsData() {
         return new Object[][]{
                 { SAUCE, "Кетчуп", 20.0f },
-                { FILLING, "Котлета", 80.0f }
+                { FILLING, "Котлета от шефа", 80.0f }
         };
     }
 
